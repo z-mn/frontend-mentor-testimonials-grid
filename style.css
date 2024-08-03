@@ -8,6 +8,10 @@
     --clr-purple: hsl(263, 55%, 52%);
     --clr-grayish-blue: hsl(217, 19%, 35%);
     --clr-blackish-blue: hsl(219, 29%, 14%);
+    --clr-dark-background-text: hsl(0, 0%, 81%);
+    --clr-background: hsl(210, 46%, 95%);
+    --font-size: 0.8125rem;
+    --ff: 'Barlow Semi Condensed', sans-serif;
 }
 
 * {
@@ -15,7 +19,15 @@
     padding: 0;
 }
 
+html {
+    font-size: var(--font-size);
+}
+
 img {
     display: block;
     max-width: 100%;
+}
+
+body {
+    background-color: var(--clr-background);
 }
