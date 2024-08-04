@@ -11,7 +11,10 @@
     --clr-dark-background-text: hsl(0, 0%, 81%);
     --clr-background: hsl(210, 46%, 95%);
     --font-size: 0.8125rem;
-    --ff: 'Barlow Semi Condensed', sans-serif;
+    --ff: barlow-semi-condensed, sans-serif;
+    --fw-primary: 500;
+    --fw-header: 600;
+    /* Remember different opacities */
 }
 
 * {
@@ -30,4 +33,36 @@ img {
 
 body {
     background-color: var(--clr-background);
+    font-family: var(--ff);
+    font-size: 1rem;
+}
+
+.grid-container {
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+    max-width: 30rem;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.profile {
+    display: grid;
+}
+
+.profile-picture {
+    border-radius: 50%;
+}
+
+.purple {
+    background: var(--clr-purple) url(images/bg-pattern-quotation.svg) no-repeat 90% 0%;
 }
