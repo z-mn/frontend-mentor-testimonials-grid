@@ -6,15 +6,16 @@
 
 :root {
     --clr-purple: hsl(263, 55%, 52%);
+    --clr-purple-70: hsla(263, 55%, 52%, 70%);
     --clr-grayish-blue: hsl(217, 19%, 35%);
     --clr-blackish-blue: hsl(219, 29%, 14%);
     --clr-dark-background-text: hsl(0, 0%, 81%);
     --clr-background: hsl(210, 46%, 95%);
     --font-size: 0.8125rem;
-    --ff: barlow-semi-condensed, sans-serif;
+    --ff: "Barlow Semi Condensed", sans-serif;
     --fw-primary: 500;
     --fw-header: 600;
-    /* Remember different opacities */
+    --profile-pic-width: 2.5rem;
 }
 
 * {
@@ -35,13 +36,14 @@ body {
     background-color: var(--clr-background);
     font-family: var(--ff);
     font-size: 1rem;
+    font-weight: var(--fw-primary);
 }
 
 .grid-container {
     margin: auto;
     display: grid;
     gap: 2rem;
-    max-width: 30rem;
+    max-width: 29.1rem;
     align-items: center;
     justify-content: center;
     padding: 5rem 2rem;
@@ -52,17 +54,52 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-grayish-blue) / 0.25);
 }
 
 .profile {
     display: grid;
+    grid-template: 1fr 1fr;
+    width: 11rem;
+}
+
+.name {
+    grid-row: 1;
+}
+
+.rank {
+    grid-row: 2;
+    font-size: 0.85em;
 }
 
 .profile-picture {
     border-radius: 50%;
+    grid-row: 1 / span 2;
+    width: var(--profile-pic-width);
+    aspect-ratio: 1;
+    border: 2px solid hsla(var(--clr-purple-70));
+}
+
+.heading {
+    margin-block: 1.5rem 1rem;
+    font-weight: var(--fw-header);
+    font-size: 1.53846153846rem;
+}
+
+.comment {
+    line-height: 1.5;
 }
 
 .purple {
     background: var(--clr-purple) url(images/bg-pattern-quotation.svg) no-repeat 90% 0%;
+    color: white;
+}
+
+.purple .rank {
+    opacity: 50%;
+}
+
+.purple .comment {
+    opacity: 70%;
 }
