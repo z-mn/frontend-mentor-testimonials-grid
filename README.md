@@ -19,9 +19,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](mobile_screenshot.png)
+![](desktop_screenshot.png)
 
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/z-mn/frontend-mentor-testimonials-grid)
-- Live Site URL: [Live Site URL](hhttps://z-mn.github.io/frontend-mentor-testimonials-grid/)
+- Live Site URL: [Live Site URL](https://z-mn.github.io/frontend-mentor-testimonials-grid/)
